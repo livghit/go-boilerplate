@@ -1,7 +1,7 @@
 # BACKBONE FOR A GO RESTfull - Api
-## Project Structure
+## Project Structure (at the moment)
 ```
-- main
+- RESTapi
     -- database/
     -- https/
     -- routes/
