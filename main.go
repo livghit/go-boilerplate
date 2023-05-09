@@ -1,12 +1,10 @@
 package main
 
 import (
-	routes "RESTapi/routes"
-	"fmt"
+  "github.com/livghit/go-boilerplate/routes"
 )
 
-var route []routes.Routes
 
 func main() {
-  fmt.Print("Hello bre ")
+ routes.LoadRoutes();
 }

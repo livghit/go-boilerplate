@@ -1,6 +1,7 @@
 package routes
 
 import (
+ db "github.com/livghit/go-boilerplate/database"
 	"fmt"
 )
 
@@ -9,5 +10,6 @@ type Routes struct {
 }
 
 func LoadRoutes() {
-	fmt.Print("Hello from Routes folder")
+  databaseConstant := db.Three; 
+	fmt.Printf("Hello %v from Routes folder", databaseConstant);
 }
