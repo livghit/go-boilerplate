@@ -1,15 +1,14 @@
 package main
 
 import "github.com/gin-gonic/gin"
-import "github.com/livghit/app/routes"
+import "github.com/livghit/go-boilerplate/app/routes"
 
 type Router struct{
-  routes []routes
+  routes []routes.Route
   engine gin.Engine 
 }
 
 
 func (r *Router) LoadRoutes(){
-  r.engine = *gin.Default()
-  routes := routes 
+  r.routes = routes.Routes
 }
