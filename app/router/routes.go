@@ -1,4 +1,4 @@
-package routes
+package router 
 
 type Route struct {
 	routeType  string
