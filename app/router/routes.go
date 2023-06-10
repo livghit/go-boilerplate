@@ -1,20 +1,23 @@
-package router 
+package router
+
+import "github.com/gin-gonic/gin"
 
 type Route struct {
 	routeType  string
-	routeParam string
+	routePath  string
+	routeParam func(*gin.Context)
 }
 
 var Routes []Route
 
-func New(rt string, rp string) *Route {
-	return &Route{routeType: rt, routeParam: rp}
+func newRoute(rt string, rpath string, rp func(*gin.Context)) *Route {
+	return &Route{routeType: rt, routePath: rpath, routeParam: rp}
 }
 
-func (r *Route) addRoute(routeType string, routeParam string) {
+func (r *Router) AddRoute(routeType string, rpath string, routeParam func(*gin.Context)) {
 	rt := routeType
 	rp := routeParam
-	route := New(rt, rp)
+	route := newRoute(rt, rpath, rp)
 	Routes = append(Routes, *route)
 }
 
