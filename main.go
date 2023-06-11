@@ -16,7 +16,6 @@ func main() {
 			"message": "pong",
 		})
 	})
-  r.LoadRoutes()
 
-  
+	r.RouterServe()
 }

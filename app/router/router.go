@@ -9,15 +9,10 @@ type Router struct {
 
 
 func NewRouter() *Router {
-	return NewRouter().initRouter()
+	return &Router{routes: Routes , engine: gin.Default()}
 }
 
-func (r *Router) LoadRoutes() {
-	r.routes = Routes
-}
-
-func (r *Router) initRouter() *Router {
-	r.engine = gin.Default()
+func InitRouter(r *Router) *Router {
 
 	for _, route := range r.routes {
 		rt := route.routeType
@@ -31,4 +26,8 @@ func (r *Router) initRouter() *Router {
 	}
 
 	return r
+}
+
+func (r *Router) RouterServe(){
+  r.engine.Run()
 }
