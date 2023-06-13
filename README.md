@@ -1,10 +1,4 @@
-# BACKBONE FOR A GO RESTfull - Api
+# BACKBONE FOR A GO RESTfull - API - WITH FIBER
 ## Project Structure (at the moment)
 ```
-- RESTapi
-    -- database/
-    -- https/
-    -- routes/
-    -- main.go/
-- README.md
 ```
