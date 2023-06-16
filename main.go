@@ -1,11 +1,13 @@
 package main
 
 import (
-	"github.com/livghit/go-boilerplate/lib/router"
+	"github.com/livghit/go-boilerplate/routes"
 )
 
 func main() {
 	// Main Func to run the server
-	r := router.InizializeRouter()
 
+	routes.PrintRoutes()
+	routes.LoadRoutes()
+	routes.PrintRoutes()
 }

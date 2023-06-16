@@ -1,8 +1,6 @@
 package routes
 
-import (
-	"github.com/gofiber/fiber/v2"
-)
+import ()
 
 // Defining the Route type with all its params
 type Route struct {
@@ -11,6 +9,16 @@ type Route struct {
 	routeFunction func()
 }
 
-func LoadRoutes(router *fiber.App) {
+var ROUTES []Route
 
+func LoadRoutes() {
+	var routeFunc = func() {
+		println("Hello")
+	}
+	route := Route{routeType: "GET", routePath: "/", routeFunction: routeFunc}
+	ROUTES = append(ROUTES, route)
+}
+
+func PrintRoutes() {
+	println("The Route is : ", ROUTES)
 }
