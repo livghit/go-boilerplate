@@ -1,2 +1,2 @@
-serve: 
+server: 
 	go run ./main.go
