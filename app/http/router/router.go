@@ -5,5 +5,12 @@ import (
 )
 
 // Router and Routes setup
-func SetupRouter(app *fiber.App) {
+func SetupRoutes(app *fiber.App) {
+
+	// Hello World route
+
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello World")
+	})
+
 }
