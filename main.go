@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/livghit/go-boilerplate/app/http/router"
+	"github.com/livghit/go-boilerplate/app/router"
 )
 
 func main() {
