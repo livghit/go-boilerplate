@@ -5,7 +5,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var databaseConnection *gorm.DB
+var DatabaseConnection *gorm.DB
 
 func CreateConnection() {
 	dbConn, err := gorm.Open(sqlite.Open("test.db"))
@@ -13,5 +13,5 @@ func CreateConnection() {
 		panic("Database connection failed !")
 	}
 
-	databaseConnection = dbConn
+	DatabaseConnection = dbConn
 }

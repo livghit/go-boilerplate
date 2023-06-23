@@ -10,8 +10,7 @@ func main() {
 
 	app := fiber.New()
 	router.SetupRoutes(app)
-  database.CreateConnection()
+	database.CreateConnection()
 
-  app.Listen(":2020")
-
+	app.Listen(":2020")
 }
