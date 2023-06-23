@@ -7,11 +7,11 @@ import (
 
 var databaseConnection *gorm.DB
 
-func CreateConnection() *gorm.DB {
+func CreateConnection() {
 	dbConn, err := gorm.Open(sqlite.Open("test.db"))
 	if err != nil {
 		panic("Database connection failed !")
 	}
 
-	return dbConn
+	databaseConnection = dbConn
 }
