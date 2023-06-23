@@ -1,2 +1,3 @@
 # here all the Files that need to be ignored 
 .env
+app/database/test.db
